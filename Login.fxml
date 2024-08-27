@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="336.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+   <children>
+      <ImageView fitHeight="338.0" fitWidth="551.0" layoutY="-2.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@R.jpg" />
+         </image>
+      </ImageView>
+      <PasswordField fx:id="PASSF" layoutX="228.0" layoutY="174.0" prefHeight="26.0" prefWidth="224.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></PasswordField>
+      <TextField fx:id="UNAME" layoutX="228.0" layoutY="126.0" prefHeight="26.0" prefWidth="224.0">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></TextField>
+      <Label layoutX="114.0" layoutY="131.0" text="USERNAME:" textFill="#ebe4e4" />
+      <Label layoutX="113.0" layoutY="179.0" text="PASSWORD:" textFill="#ebe4e4" />
+      <Label layoutX="107.0" layoutY="70.0" prefHeight="35.0" prefWidth="162.0" text="USER LOGIN:">
+         <font>
+            <Font size="24.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.5" centerY="0.5757575757575758" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="0.9599999785423279" green="0.9408000111579895" blue="0.9408000111579895" />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+      <SplitPane layoutX="-184.0" layoutY="-244.0" orientation="VERTICAL" prefHeight="200.0" prefWidth="160.0" />
+      <Button layoutX="379.0" layoutY="209.0" mnemonicParsing="false" onAction="#LoginHandler" prefHeight="26.0" prefWidth="74.0" text="LOG IN">
+         <effect>
+            <Lighting>
+               <bumpInput>
+                  <Shadow />
+               </bumpInput>
+               <light>
+                  <Light.Distant />
+               </light>
+            </Lighting>
+         </effect></Button>
+   </children>
+</AnchorPane>
